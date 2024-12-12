@@ -33,13 +33,13 @@
     padding: 5px;
     background-color: var(--button-color);
     color: var(--button-text-color);
+    font-size: larger;
 }
 
 .button:hover {
     cursor: pointer;
     filter: brightness(110%);
     box-shadow: 4px 2px 5px #000;
-    font-size: larger;
 }
 
 a:link {
