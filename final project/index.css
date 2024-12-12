@@ -1,3 +1,4 @@
+/*creates a set of root variables that can be recognized and switched out with the theme function in JavaScript*/
 :root {
     --background-color: #78756e;
     --button-color: white;
@@ -5,12 +6,14 @@
     --horoscope-color: #020035;
     --header-bgcolor: gray;
 }
-
+/*sets global design specifics*/
 * {
     background-color: var(--background-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
 }
+
+/*Each seperate function links to a class or id assigned to an HTML object and specifies different design aspects*/
 
 .main {
     align-items: center;
@@ -81,7 +84,7 @@ a:visited {
 
 #zodiac-calc {
     margin-top: 50px;
-    margin-left: 41%;
+    margin-left: 40%;
 }
 
 .zodiac-btns {
