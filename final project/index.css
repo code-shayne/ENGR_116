@@ -162,3 +162,8 @@ a:visited {
     margin-top:20px;
     margin-bottom:20px;
 }
+
+#credits {
+    bottom:0;
+    position: absolute;
+}
