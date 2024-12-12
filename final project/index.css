@@ -31,7 +31,7 @@
     float:left;
 }
 
-#title {
+#web-title {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--header-color);
     font-size:x-large;
