@@ -3,7 +3,7 @@
     --button-color: white;
     --button-text-color: white;
     --horoscope-color: #020035;
-    --header-color: gray;
+    --header-bgcolor: gray;
 }
 
 * {
@@ -18,10 +18,14 @@
 
 #header {
     padding: 20px;
-    background-color: var(--header-color);
+    background-color: var(--header-bgcolor);
     text-align: center;
     margin: -8px;
     margin-bottom: 20px;
+}
+
+#back {
+    float:left;
 }
 
 #title {
@@ -149,4 +153,9 @@ a:visited {
 #calculate {
     color: black;
     margin: 5px;
+}
+
+#calc {
+    margin-top:20px;
+    margin-bottom:20px;
 }
