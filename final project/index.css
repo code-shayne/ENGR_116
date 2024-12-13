@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+#stuff{
+    text-align:center;
+}
+
 #header {
     padding: 20px;
     background-color: var(--header-bgcolor);
@@ -81,19 +85,15 @@ a:visited {
 }
 
 #zodiac-title {
-    margin-left: 42%;
     font-size: larger;
 }
 
 #zodiac-calc {
     margin-top: 50px;
-    margin-left: 40%;
 }
 
 .zodiac-btns {
     margin: 30px;
-    margin-left: 15%;
-    margin-right: 10%;
 }
 
 #aries {

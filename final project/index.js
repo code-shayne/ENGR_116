@@ -3,197 +3,87 @@
     const themes = {
         'aries': {
           '--background-color': '#ffa69e', //website bg
-          '--header-bgcolor': '#B8336A', //header bg color
-          '--button-color': '#8882e4', //button color
-          '--button-text-color': '#f7f4e3', //text color of button
-          '--horoscope-color': '#476CB0' //horoscope text color
+          '--header-bgcolor': '#EB2927', //header bg color
+          '--button-color': '#F57035', //button color
+          '--button-text-color': '#FFF4D4', //text color of button
+          '--horoscope-color': '#8D3136' //horoscope text color
         },
         'taurus': {
-          '--background-color': '#a9e3a3',
-          '--prompt-container-bgcolor': '#adfbc4',
-          '--header-bgcolor': '#8c69d3',
-          '--outline-color': '#559a60',
-          '--hr-color': '#17908a',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#33b876',
-          '--filter-title-bgcolor': '#8b86d0',
-          '--form-bgcolor': '#57c8a2',
-          '--form-shadow': '#0f5c49',
-          '--scroll-bgcolor': '#b0d891',
-          '--scroll-color': '#70cf6d',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': 'rgb(26,94,79)'
+          '--background-color': '#BBDAAE', //website bg
+          '--header-bgcolor': '#956B55', //header bg color
+          '--button-color': '#486A38', //button color
+          '--button-text-color': '#F6D7E6', //text color of button
+          '--horoscope-color': '#4D342D' //horoscope text color
         },   
         'gemini': {
-          '--background-color': '#ceb1be',
-          '--prompt-container-bgcolor': '#b97375',
-          '--header-bgcolor': '#799185',
-          '--outline-color': '#7c4048',
-          '--hr-color': '#C4929A',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#9F7277',
-          '--filter-title-bgcolor': '#b9739c',
-          '--form-bgcolor': '#b290c7',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#d891f',
-          '--scroll-color': '#cf6d96',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': 'rgb(94,26,75)'
+          '--background-color': '#FFF4AA', //website bg
+          '--header-bgcolor': '#E4A33B', //header bg color
+          '--button-color': '#9CEEF9', //button color
+          '--button-text-color': '#FDF0DD', //text color of button
+          '--horoscope-color': '#316280' //horoscope text color
         },
         'cancer': {
-          '--background-color': '#b5e2fa',
-          '--prompt-container-bgcolor': '#0fa3b1',
-          '--header-bgcolor': '#e4b363',
-          '--outline-color': '#5fbcc5',
-          '--hr-color': '#925f00',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#ad6a6c',
-          '--filter-title-bgcolor': '#86a7d0',
-          '--form-bgcolor': '#6d8cc5',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#d8c491',
-          '--scroll-color': '#cfa86d',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': 'rgb(26,82,94)'
+          '--background-color': '#D0E4EF', //website bg
+          '--header-bgcolor': '#9989AD', //header bg color
+          '--button-color': '#68AFB1', //button color
+          '--button-text-color': '#ECF4F7', //text color of button
+          '--horoscope-color': '#6A6D7E' //horoscope text color
         },
         'leo': {
-          '--background-color': '#9db4b6',
-          '--prompt-container-bgcolor': '#007e8c',
-          '--header-bgcolor': '#914236',
-          '--outline-color': '#0f666f',
-          '--hr-color': '#654a0a',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#b86230',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#b86230',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#a86258',
-          '--scroll-color': '#914236',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#007e8c'
+          '--background-color': '#ECCD97', //website bg
+          '--header-bgcolor': '#C16246', //header bg color
+          '--button-color': '#F6821D', //button color
+          '--button-text-color': '#F1CCBA', //text color of button
+          '--horoscope-color': '#8E4C4E' //horoscope text color
         },
         'virgo': {
-          '--background-color': '#c6e1bb',
-          '--prompt-container-bgcolor': '#869d7a',
-          '--header-bgcolor': '#91785d',
-          '--outline-color': '#5b764c',
-          '--hr-color': '#28522d',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#785a3a',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#ACAD8C',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#9cad8c',
-          '--scroll-color': '#859577',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#457c45'
+          '--background-color': '#D8C8AF', //website bg
+          '--header-bgcolor': '#8E763A', //header bg color
+          '--button-color': '#709851', //button color
+          '--button-text-color': '#D6BCA3', //text color of button
+          '--horoscope-color': '#4D5836' //horoscope text color
         },
         'libra': {
-          '--background-color': '#9F817F',
-          '--prompt-container-bgcolor': '#ECCEAC',
-          '--header-bgcolor': '#C44536',
-          '--outline-color': '#65473E',
-          '--hr-color': '#28522F',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#3D7B46',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#4F4F31',
-          '--form-shadow': '#474D37',
-          '--scroll-bgcolor': '#4F4F31',
-          '--scroll-color': '#938f6f',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#B14736'
+          '--background-color': '#D8CDD5', //website bg
+          '--header-bgcolor': '#97A5CC', //header bg color
+          '--button-color': '#DD2176', //button color
+          '--button-text-color': '#F0C6DE', //text color of button
+          '--horoscope-color': '#7B5B73' //horoscope text color
         },
         'scorpio': {
-          '--background-color': '#E3AA63',
-          '--prompt-container-bgcolor': '#F2CD60',
-          '--header-bgcolor': '#CE713B',
-          '--outline-color': '#E2AE12',
-          '--hr-color': '#EA85AF',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#E1518D',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#EC979C',
-          '--form-shadow': '#EFB27E',
-          '--scroll-bgcolor': '#EDABB7',
-          '--scroll-color': '#E38092',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#DC7B75'
+          '--background-color': '#C98F8D', //website bg
+          '--header-bgcolor': '#702029', //header bg color
+          '--button-color': '#B1212A', //button color
+          '--button-text-color': '#D8D6DB', //text color of button
+          '--horoscope-color': '#5C2A36' //horoscope text color
         },
         'sag': {
-          '--background-color': '#4F7033',
-          '--prompt-container-bgcolor': '#b42d1a',
-          '--header-bgcolor': '#891515',
-          '--outline-color': '#6B1A0F',
-          '--hr-color': '#46622D',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#BEA660',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#9F2118',
-          '--form-shadow': '#941B17',
-          '--scroll-bgcolor': '#EF9B95',
-          '--scroll-color': '#EA7971',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#79291B'
+          '--background-color': '#E8C196', //website bg
+          '--header-bgcolor': '#B0576B', //header bg color
+          '--button-color': '#EF87A2', //button color
+          '--button-text-color': '#E5B3AA', //text color of button
+          '--horoscope-color': '#BB4A42' //horoscope text color
         },
         'capricorn': {
-          '--background-color': '#ffffe0',
-          '--prompt-container-bgcolor': '#ff6163',
-          '--header-bgcolor': '#72a8ff',
-          '--outline-color': '#ff3639',
-          '--hr-color': '#ffd670',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#ff8356',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#9F2118',
-          '--form-shadow': '#941B17',
-          '--scroll-bgcolor': '#EF9B95',
-          '--scroll-color': '#EA7971',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#79291B'
+          '--background-color': '#D8D8D8', //website bg
+          '--header-bgcolor': '#674941', //header bg color
+          '--button-color': '#768870', //button color
+          '--button-text-color': '#BEB1A9', //text color of button
+          '--horoscope-color': '#1B2F4A' //horoscope text color
         },
         'aquarius': {
-          '--background-color': '#ffffe0',
-          '--prompt-container-bgcolor': '#ff6163',
-          '--header-bgcolor': '#72a8ff',
-          '--outline-color': '#ff3639',
-          '--hr-color': '#ffd670',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#ff8356',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#9F2118',
-          '--form-shadow': '#941B17',
-          '--scroll-bgcolor': '#EF9B95',
-          '--scroll-color': '#EA7971',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#79291B'
+          '--background-color': '#87C3CE', //website bg
+          '--header-bgcolor': '#8B79E5', //header bg color
+          '--button-color': '#1D78CB', //button color
+          '--button-text-color': '#DBE0E6', //text color of button
+          '--horoscope-color': '#5F1C6C' //horoscope text color
         },
         'pisces': {
-          '--background-color': '#ffffe0',
-          '--prompt-container-bgcolor': '#ff6163',
-          '--header-bgcolor': '#72a8ff',
-          '--outline-color': '#ff3639',
-          '--hr-color': '#ffd670',
-          '--button-textcolor': '#fff',
-          '--button-hovercolor': '#000',
-          '--prompt-color': '#ff8356',
-          '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#9F2118',
-          '--form-shadow': '#941B17',
-          '--scroll-bgcolor': '#EF9B95',
-          '--scroll-color': '#EA7971',
-          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#79291B'
+          '--background-color': '#FCDBF0', //website bg
+          '--header-bgcolor': '#B3A5DA', //header bg color
+          '--button-color': '#D2B8DB', //button color
+          '--button-text-color': '#FAF9F5', //text color of button
+          '--horoscope-color': '#456D86' //horoscope text color
         }
     };
 
@@ -227,6 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('libra').addEventListener('click', function() {
     applyTheme('libra')
   });
+  document.getElementById('scorpio').addEventListener('click', function() {
+    applyTheme('scorpio')
+    });
   document.getElementById('sag').addEventListener('click', function() {
   applyTheme('sag')
   });
