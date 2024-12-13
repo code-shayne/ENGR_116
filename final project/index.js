@@ -447,17 +447,17 @@ document.getElementById('pisces').addEventListener('click', function() {
       };
 
       function getRandomHoroscope(sheetName) {
-        const prompts = horoscopes[sheetName];
-        if (!prompts || prompts.length === 0) {
-          console.error(`No prompts found for sheet "${sheetName}".`);
+        const scopes = horoscopes[sheetName];
+        if (!scopes || scopes.length === 0) {
+          console.error(`No scopes found for sheet "${sheetName}".`);
           return;
         }
       
-        const randomIndex = Math.floor(Math.random() * prompts.length);
-        const randomPrompt = prompts[randomIndex];
+        const randomIndex = Math.floor(Math.random() * scopes.length);
+        const randomScopes = scopes[randomIndex];
       
-        const promptElement = document.querySelector('#h1Title');    
-        promptElement.textContent = randomPrompt;
+        const scopeElement = document.getElementById('title');    
+        scopeElement.textContent = randomScope;
       }
 
       const aries = document.getElementById('aries');
