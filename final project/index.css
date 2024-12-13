@@ -46,7 +46,10 @@
     font-family:Georgia;
     background-color: var(--horoscope-color);
     margin: 60px;
-    margin-left: 44%;
+}
+
+#title{
+    visibility: hidden;
 }
 
 .button {
@@ -161,6 +164,10 @@ a:visited {
 #calc {
     margin-top:20px;
     margin-bottom:20px;
+}
+
+#horo {
+    text-align: center;
 }
 
 #credits {
