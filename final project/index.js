@@ -4,7 +4,7 @@
         'aries': {
           '--background-color': '#ffa69e', //website bg
           '--header-bgcolor': '#B8336A', //header bg color
-          '--outline-color': '#8882e4', //button outline color
+          '--button-color': '#8882e4', //button color
           '--button-text-color': '#f7f4e3', //text color of button
           '--horoscope-color': '#476CB0' //horoscope text color
         },
@@ -457,7 +457,7 @@ document.getElementById('pisces').addEventListener('click', function() {
         const randomScopes = scopes[randomIndex];
       
         const scopeElement = document.getElementById('title');    
-        scopeElement.textContent = randomScope;
+        scopeElement.textContent = randomScopes;
       }
 
       const aries = document.getElementById('aries');
