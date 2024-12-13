@@ -508,3 +508,14 @@ document.getElementById('pisces').addEventListener('click', function() {
         pisces.addEventListener('click', () => {
         getRandomHoroscope('pisces');
       })
+
+      function keepBigButShowTXT() {
+        const horoBtn = document.getElementById("horoscope"); 
+        const horoscopeText = document.getElementById("title");
+        const horo = document.querySelector(".horo");
+        const horos = document.querySelector(".horos");
+        
+      horoscopeText.classList.add("active");
+
+      horoscopeText.style.display = "block";
+    }
