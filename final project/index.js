@@ -1,6 +1,14 @@
+//Lauren McNaboe  
   // Function to apply theme
   function applyTheme(theme) {
     const themes = {
+        'default': {
+            '--background-color': '#78756e', //website bg
+            '--button-color': 'white', //header bg color
+            '--button-text-color': '#D4D4D4', //button color
+            '--horoscope-color': '#020035', //text color of button
+            '--header-bgcolor': 'gray' //horoscope text color
+        },
         'aries': {
           '--background-color': '#ffa69e', //website bg
           '--header-bgcolor': '#EB2927', //header bg color
@@ -87,15 +95,19 @@
         }
     };
 
-    const root = document.documentElement;
-    const themeVariables = themes[theme];
-    Object.keys(themeVariables).forEach(property => {
-        root.style.setProperty(property, themeVariables[property]);
+    const root = document.documentElement;  //selects html element of html doc
+    const themeVariables = themes[theme]; //gets the CSS variables that change the colors of certain objects
+    Object.keys(themeVariables).forEach(property => { //puts the variables into an array
+        root.style.setProperty(property, themeVariables[property]); //sets the variables to the new values as defined above
     });
+
+    localStorage.setItem('selectedTheme', theme); //saves the theme in local storage to retrieve later
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Add event listeners to theme toggle buttons
+document.addEventListener('DOMContentLoaded', function() { //creates an event listener for when the page loads 
+  document.getElementById("default").addEventListener('click', function() { //grabs the id of whatever button was clicked
+    applyTheme('default'); //and applies the theme
+});
   document.getElementById("aries").addEventListener('click', function() {
       applyTheme('aries');
   });
@@ -132,10 +144,123 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('pisces').addEventListener('click', function() {
     applyTheme('pisces')
     });
+
+  // applying theme stored (if available)
+  const selectedTheme = localStorage.getItem('selectedTheme'); //grabs selected theme from local storage
+  if (selectedTheme) { //if there is a stored theme
+      applyTheme(selectedTheme); //then apply it
+  }
 });
 
-    const horoscopes = {
-        aries: [
+//loading selected theme to html page
+function loadSelectedTheme() {
+  const selectedTheme = localStorage.getItem('selectedTheme');
+  if (selectedTheme) {
+      applyTheme(selectedTheme);
+  }
+  }
+
+// function to get personality description based on zodiac sign
+function getZodiacDescription(sign) {  //function that takes in a sign
+    const descriptions = { //creates an object to hold descriptions
+        aries: 'Aries are passionate, energetic, and bold. They are natural leaders who love challenges.',
+        //^key: ^value
+        taurus: 'Taurus individuals are reliable, practical, and devoted. They appreciate stability and enjoy the finer things in life.',
+        gemini: 'Geminis are adaptable, outgoing, and intelligent. They thrive on variety and enjoy social interactions.',
+        cancer: 'Cancers are nurturing, empathetic, and loyal. They are deeply connected to their home and family.',
+        leo: 'Leos are confident, charismatic, and generous. They enjoy being in the spotlight and leading others.',
+        virgo: 'Virgos are detail-oriented, analytical, and kind. They have a strong sense of duty and strive for perfection.',
+        libra: 'Libras are diplomatic, charming, and harmonious. They seek balance and value their relationships highly.',
+        scorpio: 'Scorpios are passionate, resourceful, and intuitive. They are determined and often seek deep connections.',
+        sagittarius: 'Sagittarians are adventurous, optimistic, and philosophical. They love exploring new ideas and places.',
+        capricorn: 'Capricorns are disciplined, ambitious, and responsible. They value hard work and aim for long-term success.',
+        aquarius: 'Aquarians are innovative, independent, and humanitarian. They often think outside the box and value social justice.',
+        pisces: 'Pisces are compassionate, artistic, and wise. They are deeply intuitive and often connect with the arts.'
+    };
+    return descriptions[sign]; //returns the value in the object that matches what was inputted
+}
+
+// function that assigns a sign based on what was selected in the drop down menu
+function getZodiacSign() {
+    const monthSelect = document.getElementById('months'); //gets the month from the element that has the id months
+    const daySelect = document.getElementById('day'); //gets the day from the element that has the id days
+    
+    const monthNames = [ //array that stores the names of the months
+        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const selectedMonth = monthNames.indexOf(monthSelect.value) + 1; //takes the month selected, and matches it with one in the array and adds 1 to the index since it starts at 0
+    //^ converts to a number
+    const selectedDay = parseInt(daySelect.value); //converts string number to integer
+    
+    const zodiacElement = document.getElementById('zodiac'); //gets the zodiac from the element that has the id zodiac
+    const titleElement = document.getElementById('title'); //gets the title from the element that has the id title
+    
+    // resets previous displays
+    zodiacElement.textContent = '';
+    titleElement.textContent = '';
+    zodiacElement.style.display = 'none';
+    titleElement.style.display = 'none';
+    
+    // determine zodiac sign using if statements
+    let sign = ''; //starting with sign as a blank string
+    if ((selectedMonth === 3 && selectedDay >= 21) || (selectedMonth === 4 && selectedDay <= 19)) { //checking if the date is in between certain values to assign a sign
+        sign = 'aries';
+    } 
+    else if ((selectedMonth === 4 && selectedDay >= 20) || (selectedMonth === 5 && selectedDay <= 20)) {
+        sign = 'taurus';
+    } 
+    else if ((selectedMonth === 5 && selectedDay >= 21) || (selectedMonth === 6 && selectedDay <= 20)) {
+        sign = 'gemini';
+    } 
+    else if ((selectedMonth === 6 && selectedDay >= 21) || (selectedMonth === 7 && selectedDay <= 22)) {
+        sign = 'cancer';
+    } 
+    else if ((selectedMonth === 7 && selectedDay >= 23) || (selectedMonth === 8 && selectedDay <= 22)) {
+        sign = 'leo';
+    } 
+    else if ((selectedMonth === 8 && selectedDay >= 23) || (selectedMonth === 9 && selectedDay <= 22)) {
+        sign = 'virgo';
+    } 
+    else if ((selectedMonth === 9 && selectedDay >= 23) || (selectedMonth === 10 && selectedDay <= 22)) {
+        sign = 'libra';
+    } 
+    else if ((selectedMonth === 10 && selectedDay >= 23) || (selectedMonth === 11 && selectedDay <= 21)) {
+        sign = 'scorpio';
+    } 
+    else if ((selectedMonth === 11 && selectedDay >= 22) || (selectedMonth === 12 && selectedDay <= 21)) {
+        sign = 'sagittarius';
+    } 
+    else if ((selectedMonth === 12 && selectedDay >= 22) || (selectedMonth === 1 && selectedDay <= 19)) {
+        sign = 'capricorn';
+    } 
+    else if ((selectedMonth === 1 && selectedDay >= 20) || (selectedMonth === 2 && selectedDay <= 18)) {
+        sign = 'aquarius';
+    } 
+    else if ((selectedMonth === 2 && selectedDay >= 19) || (selectedMonth === 3 && selectedDay <= 20)) {
+        sign = 'pisces';
+    }
+    
+    // Display zodiac sign and personality description
+    const description = getZodiacDescription(sign); //gets the description in the function above
+    zodiacElement.textContent = `You are a ${sign.charAt(0).toUpperCase() + sign.slice(1)}: ${description}`; //tells you your sign, while capitalizing the first letter (character at index 0)
+    //^ also adds on the description after a colon
+    zodiacElement.style.display = 'block'; // sets it in block style
+    
+    // Get and display random horoscope
+    getRandomHoroscope(sign); //displays random horoscope based on the sign
+}
+
+// Ensure the event listener is added when the DOM is loaded
+document.addEventListener('DOMContentLoaded', function() { //adds event listener for when the page fully loads
+    const calculateButton = document.getElementById('calculate'); //selects element with id calculate and stores it to a variable
+    calculateButton.addEventListener('click', getZodiacSign); //on click, run getZodiacSign
+});
+
+//Scarlett Bach----------------------------------------------------------------------------------------------------------------------
+
+    const horoscopes = { //object that hold all of the horoscopes in a json file
+        aries: [ //key
+            //values to the key
             "You will look towards your professional growth and realise you are way further along the road than you expected to be.",
             "If you are considering kicking some unhealthy habits then start now - don't wait until January!",
             "You may find that not everyone is proud of your achievements, and that is fine. However, when it is sheer jealousy driving their emotions it makes them look ugly, and you will come out on top.",
@@ -336,23 +461,30 @@ document.getElementById('pisces').addEventListener('click', function() {
             "You will be inclined to daydream more than usual this week, Pisces. The truth of the matter is that a lot of what you wish for can happen with a little hard work and commitment to the cause.",
             "You feel like you have been betrayed, Pisces. The truth of the matter is that they had your best interests at heart and didn’t mean to hurt you.",
             "If you feel like your heart is being taken for granted then you must do something about it. Speak up and make sure you are heard, otherwise nothing will change."
+          ],
+          default: [
+            " " //has to be defined in order for default button to work
           ]
       };
 
-      function getRandomHoroscope(sheetName) {
-        const scopes = horoscopes[sheetName];
-        if (!scopes || scopes.length === 0) {
-          console.error(`No scopes found for sheet "${sheetName}".`);
+      function getRandomHoroscope(signs) {
+        const scopes = horoscopes[signs];  //takes the inputted sign and runs it through getRandomHoroscope function
+        if (!scopes || scopes.length === 0) { //if its not there or there is no length
+          console.error(`No horoscopes found for sheet "${signs}".`); //tell the user there are no horoscopes for that specific thing
           return;
         }
       
-        const randomIndex = Math.floor(Math.random() * scopes.length);
-        const randomScopes = scopes[randomIndex];
+        const randomIndex = Math.floor(Math.random() * scopes.length);  //takes the length of the key and multiplies it by a random number, rounding it down to the nearest integer
+        const randomScopes = scopes[randomIndex]; //stores the horoscope at that length in the key
       
-        const scopeElement = document.getElementById('title');    
-        scopeElement.textContent = randomScopes;
+        const scopeElement = document.getElementById('title'); //grabs the title element on the html
+        scopeElement.textContent = randomScopes; //and replaces it with the horoscope that was randomized
       }
 
+      const regular = document.getElementById('default'); //gets the button that has id default
+        regular.addEventListener('click', () => { //when clicked
+        getRandomHoroscope('default'); //runs getRandomHoroscope for the default section
+      })
       const aries = document.getElementById('aries');
         aries.addEventListener('click', () => {
         getRandomHoroscope('aries');
@@ -402,7 +534,8 @@ document.getElementById('pisces').addEventListener('click', function() {
         getRandomHoroscope('pisces');
       })
 
-      function keepBigButShowTXT() {
-        const horos = document.getElementById("title");
-        horos.style.visibility = "visible";
+      function keepBigButShowTXT() {  //has nothing to do with the big button just funny
+        const horos = document.getElementById("title"); //takes the title
+        horos.style.visibility = "visible"; // and makes it visible
+        //because the default in the style sheet is hidden
     }
