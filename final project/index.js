@@ -510,6 +510,6 @@ document.getElementById('pisces').addEventListener('click', function() {
       })
 
       function keepBigButShowTXT() {
-        const horos = document.querySelector(".scope");
+        const horos = document.getElementById("title");
         horos.style.visibility = "visible";
     }
